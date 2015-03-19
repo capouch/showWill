@@ -1,0 +1,56 @@
+<!-- Program to add an underline optio for users to input at a designated line
+
+		William Decker
+Game start :	MArch 16 2015
+
+-->
+
+
+  <!-- Use jQuery from a CDN -->                      
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="calcFuncs.js"></script>
+  <script type="text/javascript" src="drawFuncs.js"></script>
+  <script type="text/javascript" src="TextCell.js"></script>
+  <script type="text/javascript" src="UnderlinedCell.js"></script>
+  <script type="text/javascript" src="printData.js"></script>
+    <title>Hello!</title>
+</head>
+<body>
+    <h3>Do you want to put a new underline in my graph?</h3>
+	<div></div>
+	//this is the spot to put the graph
+	<pre>
+	<div id="tablePrint"> </div>	
+	</pre>
+    <div></div>
+    <button onclick="chooseYes()">Yes</button>
+    <input type="button" onclick="chooseNo()" value="No"/>
+    <script>
+    // Willyd trying hard to get used to commiting
+    // Yes or no to my quuestion
+	var misc = require('./misc');
+	document.getElementById('tablePrint').innerHTML = misc.PPVS;
+	
+	function chooseYes() {
+		var answer = prompt("Enter which line you'd like", "Line of graph");
+		console.log("FUCK");
+		if (answer != null) {
+			console.log("This is a test");
+		}
+	       $('#tablePrint').empty();
+               $('#tablePrint').append('<pre>' + result + '</pre>');
+
+	} 
+	
+	function chooseNo() {
+		alert("THEN YOU HAVE NO USE FOR MY CODE!");
+	}
+      // Clear out the div, and then fill it with fresh
+      // This is the wonderful, invisible work of jQuery
+      $('#output').empty(); 
+      $('#output').append('<pre>' + result + '</pre>');
+      
+  </script>
+<div id="output"></div>
+</body>
+</html>
